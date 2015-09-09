@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Save_The_Humans"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Save The Humans" Height="700" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
@@ -16,16 +16,14 @@
             <RowDefinition/>
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" 
-                Margin="35,71,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
-        <TextBlock x:Name="textBlock" Grid.Column="2" HorizontalAlignment="Left" 
-                   Margin="58,51,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <ProgressBar Grid.Column="1" HorizontalAlignment="Left" 
-                     Height="10" Margin="60,64,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-        <ContentControl Content="ContentControl" Grid.Column="2" HorizontalAlignment="Left" 
-                        Margin="44,78,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Canvas Grid.Column="1" HorizontalAlignment="Left" 
-                Height="100" Margin="67,41,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="startButton" Content="Start" 
+                Margin="52,74,60,56" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="1">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Avoid These" FontSize="24" HorizontalAlignment="Center"/>
+            <ContentControl Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+        <ProgressBar Grid.Column="1" Grid.Row="1" Height="20"/>
+        <Canvas x:Name="playArea" Grid.ColumnSpan="3"/>
 
     </Grid>
 </Window>
